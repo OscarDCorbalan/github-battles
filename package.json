@@ -8,6 +8,9 @@
   },
   "author": "Oscar D. Corbalan (oscardc@gmx.com)",
   "license": "ISC",
+  "scripts": {
+    "test": "ava 'app/**/*.test.js' --verbose --require ./other/setup-ava-tests.js"
+  },
   "dependencies": {
     "jquery": "^3.0.0"
   }
