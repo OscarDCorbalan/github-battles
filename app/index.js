@@ -1,11 +1,20 @@
-var USER_DATA = {
+/*var USER_DATA = {
   name: 'Oscar Dominguez',
   username: 'OscarDoC',
   image: 'https://avatars3.githubusercontent.com/u/8439728?v=3&s=460'
 }
-var React = require('react');
-var ReactDOM = require('react-dom');
+*/
 
+const React = require('react');
+const ReactDOM = require('react-dom');
+const routes = require('./config/routes');
+
+ReactDOM.render(
+  routes,
+  document.getElementById('app')
+);
+
+/*
 var ProfilePic = React.createClass({
   render: function(){
     return (
@@ -61,8 +70,9 @@ var Avatar = React.createClass({
   }
 });
 
-
 ReactDOM.render(
   <Avatar user={USER_DATA} />,
   document.getElementById('app')
 );
+
+*/
