@@ -1,6 +1,6 @@
 {
   "name": "reactjsprogram",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Code for reactjsprogram.com",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,8 @@
   "dependencies": {
     "jquery": "^3.0.0",
     "react": "^15.1.0",
-    "react-dom": "^15.1.0"
+    "react-dom": "^15.1.0",
+    "react-router": "^2.4.1"
   },
   "devDependencies": {
     "babel-core": "^6.9.1",
