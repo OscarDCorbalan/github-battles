@@ -1,6 +1,6 @@
 const React = require('react');
 const ConfirmBattle = require('../components/ConfirmBattle');
-
+const githubHelpers = require('../utils/githubHelpers');
 
 module.exports = React.createClass({
 
@@ -17,8 +17,15 @@ module.exports = React.createClass({
 
   componentDidMount: function() {
     const query = this.props.location.query;
-    // TODO fetch info from github and update state
 
+    // Fetch info from github and update state
+    githubHelpers.getPlayersInfo([query.playerOne, query.playerTwo])
+    .then(players => {
+      this.setState({
+        isLoading: false,
+        playersInfo: [...players]
+      });
+    });
   },
 
   render: function() {
