@@ -4,7 +4,8 @@
   "description": "Code for reactjsprogram.com",
   "main": "index.js",
   "scripts": {
-    "production": "webpack -p"
+    "production": "webpack -p",
+    "start": "webpack-dev-server"
   },
   "author": "Oscar D. Corbalan (oscardc@gmx.com)",
   "license": "ISC",
