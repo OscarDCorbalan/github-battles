@@ -10,6 +10,13 @@ function puke(obj) {
 const ConfirmBattle = props => (
   props.isLoading? <p>Loading</p> :
                    <p>Confirm Battle: {puke(props)}</p>
-)
+);
+
+
+ConfirmBattle.propTypes = {
+  isLoading: PropTypes.bool.isRequired,
+  playersInfo: PropTypes.array.isRequired
+};
+
 
 module.exports = ConfirmBattle;
