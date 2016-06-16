@@ -9,7 +9,7 @@ const UserDetailsWrapper = require('./UserDetailsWrapper');
 
 function puke(obj) {
   return <pre>{JSON.stringify(obj, null, ' ')}</pre>
-};
+}
 
 
 const ConfirmBattle = props => (
