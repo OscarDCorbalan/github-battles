@@ -6,10 +6,12 @@ const styles = require('../styles');
 const UserDetails = require('./UserDetails');
 const UserDetailsWrapper = require('./UserDetailsWrapper');
 const MainContainer = require('./MainContainer');
+const Loading = require('./Loading');
+
 
 const ConfirmBattle = props => (
   props.isLoading ?
-    <p>Loading</p> :
+    <Loading speed={200} text="Wait one moment" /> :
     <MainContainer>
       <h1>Confirm Players</h1>
       <div className="col-sm-8 col-sm-offset-2">

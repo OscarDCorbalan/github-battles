@@ -4,6 +4,7 @@ const Link = require('react-router').Link;
 const UserDetails = require('./UserDetails');
 const UserDetailsWrapper = require('./UserDetailsWrapper');
 const MainContainer = require('./MainContainer');
+const Loading = require('./Loading');
 const styles = require('../styles');
 
 
@@ -20,18 +21,27 @@ function StartOver() {
 }
 
 
+function Tie(props) {
+  return (
+    <MainContainer>
+      <h1>It's a tie!</h1>
+      <StartOver />
+    </MainContainer>
+  )
+}
+
+
 function Results(props) {
   if(props.isLoading){
-    return (<p>Loading</p>);
+    return (
+      <Loading speed={100} text='Calculating' />
+    )
   }
 
   if(props.scores[0] === props.scores[1]){
     return (
-      <MainContainer>
-        <h1>It's a tie!</h1>
-        <StartOver />
-      </MainContainer>
-    )    
+      <Tie scores={props.scores} playersInfo={props.playersInfo} />
+    );
   }
 
   const ixWinner = props.scores[0] > props.scores[1] ? 0 : 1;
