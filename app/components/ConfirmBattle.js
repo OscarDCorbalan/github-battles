@@ -5,17 +5,12 @@ const PropTypes = React.PropTypes;
 const styles = require('../styles');
 const UserDetails = require('./UserDetails');
 const UserDetailsWrapper = require('./UserDetailsWrapper');
-
-
-function puke(obj) {
-  return <pre>{JSON.stringify(obj, null, ' ')}</pre>
-}
-
+const MainContainer = require('./MainContainer');
 
 const ConfirmBattle = props => (
   props.isLoading ?
     <p>Loading</p> :
-    <div className="text-center jumbotron col-sm-12" style={styles.transparentBg}>
+    <MainContainer>
       <h1>Confirm Players</h1>
       <div className="col-sm-8 col-sm-offset-2">
         <UserDetailsWrapper header="Player 1">
@@ -39,7 +34,7 @@ const ConfirmBattle = props => (
           </Link>
         </div>
       </div>
-    </div>
+    </MainContainer>
 );
 
 
