@@ -1,6 +1,6 @@
 /*var USER_DATA = {
-  name: 'Oscar Dominguez',
-  username: 'OscarDoC',
+  name: 'Oscar D.Corbalan',
+  username: 'OscarDCorbalan',
   image: 'https://avatars3.githubusercontent.com/u/8439728?v=3&s=460'
 }
 */
